@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="main.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+<div class="slider">
+    <div class="slider__images">
+    <div class="slider__images-wrap">
+        <img src="img/example-slide-1.jpg" alt="Photo 1">
+        <img src="img/example-slide-2.jpg" alt="Photo 2">
+        <img src="img/example-slide-3.jpg" alt="Photo 3">
+        <img src="img/example-slide-4.jpg" alt="Photo 4">
+    </div>
+    </div>
+    <div class="slider__navigation">
+        <a href="#" class="slider__pager slider__pager_previous"><i class="icon-chevron-left icon-large"><</i></a>
+        <a href="#" class="slider__pager slider__pager_next"><i class="icon-chevron-right icon-large">></i></a>
+
+    <ul class="slider__pagination">
+        <li class="slider__pagination-item slider__pagination-item-template"><a href="#" data-slider__item="" class=""></a></li>
+        <!--<li class="slider__pagination-item"><a href="#" data-slider__item="0" class="active">l</a></li>
+        <li class="slider__pagination-item"><a href="#" data-slider__item="1" class="">2</a></li>
+        <li class="slider__pagination-item "><a href="#" data-slider__item="2" class="">3</a></li>
+        <li class="slider__pagination-item "><a href="#" data-slider__item="3" class="">4</a></li>-->
+    </ul>
+    </div>
+</div>
+<div id="modal-output"></div>
+<div class="modal-alert-one-button" id="modal">
+    <div class="modal-alert">
+        <h3>Привет, пользователь!</h3>
+        <p>Как тебя зовут?</p>
+        <input id="user-input" type="text" name="" value="Эльф">
+        <button>OK:)</button>
+    </div>
+</div>
+
+<script src="slider.js"></script>
+<script>
+    new Slider('.slider',{
+        direction: 'vertical',
+        currentSlide: 0,
+        changeInterval: 1500,
+        sliderChangeAuto: false,
+        speedSliderChangeAuto: 5000
+    });
+
+    new ModalWindow();
+    //direction: 'horizontal',
+</script>
+</body>
+</html>
